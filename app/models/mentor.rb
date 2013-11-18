@@ -5,4 +5,6 @@ class Mentor < ActiveRecord::Base
 
 	validates_presence_of :name, :info
 
+	validates :info, length: { maximum: 255 } #maybe could be allowed to be more?
+
 end

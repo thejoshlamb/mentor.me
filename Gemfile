@@ -46,3 +46,17 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+
+# heroku css tweak
+group :production, :staging do
+  gem 'rails_12factor'
+end
+
+#rspec
+group :development, :test do
+	gem 'rspec-rails'
+	gem 'factory_girl_rails'
+	gem 'selenium-webdriver'
+	gem 'capybara'
+end
