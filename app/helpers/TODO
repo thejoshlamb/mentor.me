@@ -1,0 +1,9 @@
+TODO
+
+Students and mentors are connected by meetings, so:
+students have many meetings
+mentors have many meetings
+meetings belong to student (?)
+meetings belong to mentor (?)
+students have many mentors through meetings
+mentors have many students through meetings

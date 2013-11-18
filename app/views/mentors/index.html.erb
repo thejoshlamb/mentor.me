@@ -1,0 +1,11 @@
+<h1>Mentors#index</h1>
+<p>Find me in app/views/mentors/index.html.erb</p>
+
+<% @mentors.each do |mentor| %>
+<div>
+	<%= gravatar_for mentor %>
+	<h3><%= mentor.name %></h3>
+	<p><%= mentor.info %></p>
+</div>
+<% end %>
+
