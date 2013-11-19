@@ -1,6 +1,7 @@
 class MentorsController < ApplicationController
   def index
     @mentors = Mentor.all
+    @mentorsample = @mentors.sample(8)
   end
 
   def show

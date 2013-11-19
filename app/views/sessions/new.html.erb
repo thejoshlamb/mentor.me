@@ -1,21 +1,22 @@
-<%= form_tag sessions_path do %>
-<% if @user.errors.any? %>
-	    <div class="error_messages">
-	      <h2>Form is invalid</h2>
-	      <ul>
-	        <% for message in @user.errors.full_messages %>
-	          <li><%= message %></li>
-	        <% end %>
-	      </ul>
-	    </div>
-	  <% end %>
-  <div class="field">
-    <%= label_tag :name %><br/>
-    <%= text_field_tag :name, params[:name] %>
-  </div>
-  <div class="field">
-    <%= label_tag :password %><br/>
-    <%= password_field_tag :password %>
-  </div>
-  <div class="actions"><%= submit_tag "Log in" %></div>
+<div class="row">
+    <div class="large-12 columns">
+      <div class="row">
+        <div class="large-6 small-12 large-centered small-centered columns">
+
+					<%= form_tag sessions_path do %>
+	        	<div class = "panel">
+	                <%= label_tag :email %>
+	                <%= text_field_tag :email, params[:email] %>
+	        	</div>
+	        	<div class = "panel">
+	                <%= label_tag :password %>
+	                <%= password_field_tag :password, params[:password] %>
+	        	</div>
+	       		<div class="large-3 large-centered columns">
+	                <%= submit_tag "Log in", :class => "button"  %>
+	        	</div>
+	       </div>
+	     </div>
+	   </div>
+	 </div>
 <% end %>

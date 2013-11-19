@@ -53,6 +53,12 @@ group :production, :staging do
   gem 'rails_12factor'
 end
 
+# foundation for now
+
+  gem 'compass-rails' # you need this or you get an err
+  gem 'zurb-foundation', '~> 4.0.0'
+
+
 #rspec
 group :development, :test do
 	gem 'rspec-rails'

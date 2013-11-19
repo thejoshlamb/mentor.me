@@ -5,9 +5,11 @@ MentorMe::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'welcome#index'
+   root 'mentors#index'
 
    get 'welcome/about'
+
+   get 'logout' => 'sessions#destroy'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -16,7 +18,7 @@ MentorMe::Application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-     resources :users, :only => [:new, :create]
+     resources :users, :only => [:new, :create, :show]
      resources :sessions, :only => [:new, :create, :destroy]
      resources :meetings
      resources :mentors

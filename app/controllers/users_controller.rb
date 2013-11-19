@@ -11,8 +11,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    session[:user_id] = user_id
     if @user.save
+      session[:user_id] = @user_id
       redirect_to root_url, :notice => "account created!"
     else
       render :new
@@ -31,6 +31,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-      params.require(:person).permit(:name, :email, :password, :password_confirmation)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 end

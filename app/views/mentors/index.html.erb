@@ -1,11 +1,76 @@
-<h1>Mentors#index</h1>
-<p>Find me in app/views/mentors/index.html.erb</p>
+<div class="row">
+    <div class="large-12 columns">
+ 
+      <div class="row">
+ 
+  <!-- Side Bar -->
+ 
+        <div class="large-4 small-12 columns">
+ 
+          <img src="http://placehold.it/500x500&text=Logo">
+ 
+          <div class="hide-for-small panel">
+            <h3>Welcome</h3>
+            <h5 class="subheader">Bitmaker labs gives you access to high-quality mentorship, so why aren't you getting <em>mented?</em>
+            </h5>
+          </div>
+ 
+          <a href="#">
+          <div class="panel callout radius" style="text-align:center;">
+            <h6>Sign up!</h6>
+          </div>
+          </a>
+ 
+        </div>
+ 
+    <!-- End Side Bar -->
+ 
+ 
+    <!-- Thumbnails -->
+ 
+        <div class="large-8 columns">
+          <div class="row">
 
-<% @mentors.each do |mentor| %>
-<div>
-	<%= gravatar_for mentor %>
-	<h3><%= mentor.name %></h3>
-	<p><%= mentor.info %></p>
-</div>
-<% end %>
+          	<% @mentorsample.each do |mentor| %>
+ 
+            <div class="large-4 small-6 columns">
+              	<%= gravatar_for mentor %>
+ 
+              <div class="panel">
+                <h5><%= mentor.name %></h5>
+                <p><%= mentor.info %><p>
+              </div>
+            </div>
+
+            <% end %>
+          </div>
+ 
+    <!-- End Thumbnails -->
+ 
+ 
+   
+ 
+          </div>
+        </div>
+      </div>
+ 
+ 
+    <!-- Footer -->
+ 
+      <footer class="row">
+        <div class="large-12 columns"><hr />
+          <div class="row">
+ 
+            <div class="large-6 columns">
+              <p>&copy; Copyright Josh Lamb 2013. Props to <%= link_to "Foundation", "http://foundation.zurb.com/" %></p>
+            </div>
+ 
+          </div>
+        </div>
+      </footer>
+ 
+    <!-- End Footer -->
+ 
+    </div>
+  </div>
 

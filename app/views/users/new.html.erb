@@ -1,32 +1,44 @@
-<%= form_for @user do |f| %>
-	<% if @user.errors.any? %>
-	    <div class="error_messages">
-	      <h2>Form is invalid</h2>
-	      <ul>
-	        <% for message in @user.errors.full_messages %>
-	          <li><%= message %></li>
-	        <% end %>
-	      </ul>
-	    </div>
-	<% end %>
-	 <div>
-	 	<%= f.collection_select :role, User::ROLES, :to_s, :humanize %>
-	 </div>
-	<div>
-		<%= f.label :name %>
-		<%= f.text_field :name %>
-	</div>
-	<div>
-		<%= f.label :email %>
-		<%= f.text_field :email %>
-	</div>
-	<div>
-		<%= f.label :password %>
-		<%= f.text_field :password %>
-	</div>
-	<div>
-		<%= f.label :again %>
-		<%= f.text_field :password_confirmation %>
-	</div>
-	<%= f.submit %>
+<div class="row">
+    <div class="large-12 columns">
+      <div class="row">
+        <div class="large-6 small-12 large-centered small-centered columns">
+
+				<%= form_for @user do |f| %>
+					<% if @user.errors.any? %>
+					    <div class="error_messages">
+					      <h2>Form is invalid</h2>
+					      <ul>
+					        <% for message in @user.errors.full_messages %>
+					          <li><%= message %></li>
+					        <% end %>
+					      </ul>
+					    </div>
+					<% end %>
+					<div class = "panel">
+					 	<%= f.collection_select :role, User::ROLES, :to_s, :humanize %>
+					</div>
+					
+					<div class = "panel">
+						<%= f.label :name %>
+						<%= f.text_field :name %>
+					</div>
+					
+					<div class = "panel">
+						<%= f.label :email %>
+						<%= f.text_field :email %>
+					</div>
+					
+					<div class = "panel">
+						<%= f.label :password %>
+						<%= f.text_field :password %>
+					</div>
+					
+					<div class = "panel">
+						<%= f.label "Confirm Password" %>
+						<%= f.text_field :password_confirmation %>
+					</div>
+					
+					<div class="large-4 large-centered columns">
+	                <%= submit_tag "Sign Up", :class => "button"  %>
+	        </div>
 <% end %>
