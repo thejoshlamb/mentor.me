@@ -31,6 +31,11 @@ class MentorsController < ApplicationController
 
   private
   def mentor_params
-      params.require(:mentor).permit(:name, :info, :email)
+      params.require(:mentor).permit( :name, :info, :email, :monday_available_from, :monday_available_to,
+                                      :tuesday_available_from, :tuesday_available_to,
+                                      :wednesday_available_from, :wednesday_available_to,
+                                      :thursday_available_from, :thursday_available_to, 
+                                      :friday_available_from, :friday_available_to, :saturday_available_from, 
+                                      :saturday_available_to, :sunday_available_from, :sunday_available_to) 
   end
 end

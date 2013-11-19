@@ -37,7 +37,7 @@
               	<%= gravatar_for mentor %>
  
               <div class="panel">
-                <h5><%= mentor.name %></h5>
+                <h5><%= link_to mentor.name, "meetings/new?mentor_id=#{mentor[:id]}" %></h5>
                 <p><%= mentor.info %><p>
               </div>
             </div>

@@ -54,8 +54,9 @@ group :production, :staging do
 end
 
 # foundation for now
-
+group :production do
   gem 'compass-rails' # you need this or you get an err
+end
   gem 'zurb-foundation', '~> 4.0.0'
 
 
