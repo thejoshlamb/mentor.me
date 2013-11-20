@@ -6,7 +6,8 @@ class MeetingsController < ApplicationController
   end
 
   def new
-    @meeting = Meeting.new
+    @mentor.meetings.build
+
   end
 
   def create

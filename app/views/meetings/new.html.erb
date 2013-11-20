@@ -3,7 +3,7 @@
 	<div class = "row">
 		<div class = "large-4 large-centered columns">
 			<% if current_user %>
-				<%= form_for @meeting do |f| %>
+				<%= form_for (@mentor,@meeting) do |f| %>
 					<div class ="panel">
 						<div>
 							<%= f.label :date %>
