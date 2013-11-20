@@ -7,7 +7,7 @@
  
         <div class="large-4 small-12 columns">
  
-          <img src="http://placehold.it/500x500&text=Logo">
+          <img src="/mdot.png">
  
           <div class="hide-for-small panel">
             <h3>Welcome</h3>
@@ -37,7 +37,7 @@
               	<%= gravatar_for mentor %>
  
               <div class="panel">
-                <h5><%= link_to mentor.name, "meetings/new?mentor_id=#{mentor[:id]}" %></h5>
+                <h5><%= link_to mentor.name, "mentors/#{mentor[:id]}" %></h5>
                 <p><%= mentor.info %><p>
               </div>
             </div>

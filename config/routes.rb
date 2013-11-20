@@ -18,8 +18,9 @@ MentorMe::Application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
      resources :users, :only => [:new, :create, :show]
      resources :sessions, :only => [:new, :create, :destroy]
-     resources :mentors
-     resources :meetings
+     resources :mentors do
+      resources :meetings
+    end
      resources :skills
      resources :categories
 

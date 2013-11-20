@@ -1,2 +1,164 @@
-<h1>Mentors#show</h1>
-<p>Find me in app/views/mentors/show.html.erb</p>
+<div id = "center">
+	<%= gravatar_for @mentor %>
+	<h1><%= @mentor.name %></h1>
+</div>
+<div class = "row">
+	<div class = "large-8 large-centered columns">
+		<h4 class="subheader" id="center">
+			<%= @mentor.info %>
+		</h4>
+	</div>
+</div>
+<br>
+<br>
+<div class = "row">
+	<ul class = "large-block-grid-7" id="collapse-padding" >
+		<li id="collapse-padding">
+			<div class = "panel" id="center">
+				Monday
+				<hr />
+				<% if @mentor.monday_available_from <= 9  %>
+					<%= link_to "Morning", new_mentor_meeting_path(params[:id]), :class => "button expand" %>
+				<% else %>
+					<%= link_to "Morning", new_mentor_meeting_path(params[:id]), :class => "button expand disabled" %>
+				<% end %>
+				<% if @mentor.monday_available_from <= 12 && @mentor.monday_available_to >= 12 %>
+					<%= link_to "Afternoon", new_mentor_meeting_path(params[:id]), :class => "button expand" %>
+				<% else %>
+					<%= link_to "Afternoon", new_mentor_meeting_path(params[:id]), :class => "button expand disabled" %>
+				<% end %>
+				<% if @mentor.monday_available_from <= 23 && @mentor.monday_available_to >= 22 %>
+					<%= link_to "Evening", new_mentor_meeting_path(params[:id]), :class => "button expand" %>
+				<% else %>
+					<%= link_to "Evening", new_mentor_meeting_path(params[:id]), :class => "button expand disabled" %>
+				<% end %>
+			</div>
+		</li>
+		<li id="collapse-padding">
+			<div class = "panel" id="center">
+				Tuesday
+				<hr />
+				<% if @mentor.tuesday_available_from <= 9  %>
+					<%= link_to "Morning", new_mentor_meeting_path(params[:id]), :class => "button expand" %>
+				<% else %>
+					<%= link_to "Morning", new_mentor_meeting_path(params[:id]), :class => "button expand disabled" %>
+				<% end %>
+				<% if @mentor.tuesday_available_from <= 12 && @mentor.tuesday_available_to >= 12 %>
+					<%= link_to "Afternoon", new_mentor_meeting_path(params[:id]), :class => "button expand" %>
+				<% else %>
+					<%= link_to "Afternoon", new_mentor_meeting_path(params[:id]), :class => "button expand disabled" %>
+				<% end %>
+				<% if @mentor.tuesday_available_from <= 23 && @mentor.tuesday_available_to >= 22 %>
+					<%= link_to "Evening", new_mentor_meeting_path(params[:id]), :class => "button expand" %>
+				<% else %>
+					<%= link_to "Evening", new_mentor_meeting_path(params[:id]), :class => "button expand disabled" %>
+				<% end %>
+			</div>
+		</li>
+		<li id="collapse-padding">
+			<div class = "panel" id="center">
+				Wednesday
+				<hr />
+				<% if @mentor.wednesday_available_from <= 9  %>
+					<%= link_to "Morning", new_mentor_meeting_path(params[:id]), :class => "button expand" %>
+				<% else %>
+					<%= link_to "Morning", new_mentor_meeting_path(params[:id]), :class => "button expand disabled" %>
+				<% end %>
+				<% if @mentor.wednesday_available_from <= 12 && @mentor.wednesday_available_to >= 12 %>
+					<%= link_to "Afternoon", new_mentor_meeting_path(params[:id]), :class => "button expand" %>
+				<% else %>
+					<%= link_to "Afternoon", new_mentor_meeting_path(params[:id]), :class => "button expand disabled" %>
+				<% end %>
+				<% if @mentor.wednesday_available_from <= 23 && @mentor.wednesday_available_to >= 22 %>
+					<%= link_to "Evening", new_mentor_meeting_path(params[:id]), :class => "button expand" %>
+				<% else %>
+					<%= link_to "Evening", new_mentor_meeting_path(params[:id]), :class => "button expand disabled" %>
+				<% end %>
+			</div>
+		</li>
+		<li id="collapse-padding">
+			<div class = "panel" id="center">
+				Thursday
+				<hr />
+				<% if @mentor.thursday_available_from <= 9  %>
+					<%= link_to "Morning", new_mentor_meeting_path(params[:id]), :class => "button expand" %>
+				<% else %>
+					<%= link_to "Morning", new_mentor_meeting_path(params[:id]), :class => "button expand disabled" %>
+				<% end %>
+				<% if @mentor.thursday_available_from <= 12 && @mentor.thursday_available_to >= 12 %>
+					<%= link_to "Afternoon", new_mentor_meeting_path(params[:id]), :class => "button expand" %>
+				<% else %>
+					<%= link_to "Afternoon", new_mentor_meeting_path(params[:id]), :class => "button expand disabled" %>
+				<% end %>
+				<% if @mentor.thursday_available_from <= 23 && @mentor.thursday_available_to >= 22 %>
+					<%= link_to "Evening", new_mentor_meeting_path(params[:id]), :class => "button expand" %>
+				<% else %>
+					<%= link_to "Evening", new_mentor_meeting_path(params[:id]), :class => "button expand disabled" %>
+				<% end %>
+			</div>
+		</li>
+		<li id="collapse-padding">
+			<div class = "panel" id="center">
+				Friday
+				<hr />
+				<% if @mentor.friday_available_from <= 9  %>
+					<%= link_to "Morning", new_mentor_meeting_path(params[:id]), :class => "button expand" %>
+				<% else %>
+					<%= link_to "Morning", new_mentor_meeting_path(params[:id]), :class => "button expand disabled" %>
+				<% end %>
+				<% if @mentor.friday_available_from <= 12 && @mentor.friday_available_to >= 12 %>
+					<%= link_to "Afternoon", new_mentor_meeting_path(params[:id]), :class => "button expand" %>
+				<% else %>
+					<%= link_to "Afternoon", new_mentor_meeting_path(params[:id]), :class => "button expand disabled" %>
+				<% end %>
+				<% if @mentor.friday_available_from <= 23 && @mentor.friday_available_to >= 22 %>
+					<%= link_to "Evening", new_mentor_meeting_path(params[:id]), :class => "button expand" %>
+				<% else %>
+					<%= link_to "Evening", new_mentor_meeting_path(params[:id]), :class => "button expand disabled" %>
+				<% end %>
+			</div>
+		</li>
+		<li id="collapse-padding">
+			<div class = "panel" id="center">
+				Saturday
+				<hr />
+				<% if @mentor.saturday_available_from <= 9  %>
+					<%= link_to "Morning", new_mentor_meeting_path(params[:id]), :class => "button expand" %>
+				<% else %>
+					<%= link_to "Morning", new_mentor_meeting_path(params[:id]), :class => "button expand disabled" %>
+				<% end %>
+				<% if @mentor.saturday_available_from <= 12 && @mentor.saturday_available_to >= 12 %>
+					<%= link_to "Afternoon", new_mentor_meeting_path(params[:id]), :class => "button expand" %>
+				<% else %>
+					<%= link_to "Afternoon", new_mentor_meeting_path(params[:id]), :class => "button expand disabled" %>
+				<% end %>
+				<% if @mentor.saturday_available_from <= 23 && @mentor.saturday_available_to >= 22 %>
+					<%= link_to "Evening", new_mentor_meeting_path(params[:id]), :class => "button expand" %>
+				<% else %>
+					<%= link_to "Evening", new_mentor_meeting_path(params[:id]), :class => "button expand disabled" %>
+				<% end %>
+			</div>
+		</li>
+		<li id="collapse-padding">
+			<div class = "panel" id="center">
+				Sunday
+				<hr />
+				<% if @mentor.sunday_available_from <= 9  %>
+					<%= link_to "Morning", new_mentor_meeting_path(params[:id]), :class => "button expand" %>
+				<% else %>
+					<%= link_to "Morning", new_mentor_meeting_path(params[:id]), :class => "button expand disabled" %>
+				<% end %>
+				<% if @mentor.sunday_available_from <= 12 && @mentor.sunday_available_to >= 12 %>
+					<%= link_to "Afternoon", new_mentor_meeting_path(params[:id]), :class => "button expand" %>
+				<% else %>
+					<%= link_to "Afternoon", new_mentor_meeting_path(params[:id]), :class => "button expand disabled" %>
+				<% end %>
+				<% if @mentor.sunday_available_from <= 23 && @mentor.sunday_available_to >= 22 %>
+					<%= link_to "Evening", new_mentor_meeting_path(params[:id]), :class => "button expand" %>
+				<% else %>
+					<%= link_to "Evening", new_mentor_meeting_path(params[:id]), :class => "button expand disabled" %>
+				<% end %>
+			</div>
+		</li>
+	</ul>
+</div>

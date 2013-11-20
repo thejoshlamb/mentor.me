@@ -5,6 +5,7 @@ class MentorsController < ApplicationController
   end
 
   def show
+    @mentor = Mentor.find(params[:id])
   end
 
   def new
